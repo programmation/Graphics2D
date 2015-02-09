@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:p="clr-namespace:Programmation.Xam.Graphics2D;assembly=Graphics2D"
+	x:Class="Graphics2D.SamplePageInXaml">
+	<ContentPage.Content>
+		<ScrollView x:Name="_scrollView">
+			<StackLayout x:Name="_mainView" BackgroundColor="Gray" VerticalOptions="Center">
+				<StackLayout.Padding>
+					<Thickness Left="0" Top="0" Right="0" Bottom="5"/>
+				</StackLayout.Padding>
+				<StackLayout.Children>
+					<Label Text="Welcome to Xamarin Forms!" XAlign="Center" TextColor="White" />
+					<Slider x:Name="_beerSlider" HorizontalOptions="Center" Minimum="0.3" Maximum="2.0" Value="1.0" ValueChanged="HandleBeerSliderUpdate" />
+					<p:Graphic x:Name="_beerView" GraphicSource="BeerIcon" BackgroundColor="Transparent" HorizontalOptions="Center" />
+					<Button x:Name="_actionButton" Text="Hide" TextColor="White" FontSize="25" FontAttributes="Bold" Clicked="HandleActionButtonClicked" /> 
+					<p:Graphic x:Name="_logoView" GraphicSource="Logo" BackColor="White" HorizontalOptions="CenterAndExpand" />
+				</StackLayout.Children>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
